@@ -1,7 +1,11 @@
 package me.dio.academia.entity;
 
-import java.time.LocalDateTime;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+@Data
+@NoArgsConstructor
 public class AvaliacaoFisica {
 
     private Long id;
