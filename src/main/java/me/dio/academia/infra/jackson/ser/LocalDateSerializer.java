@@ -19,4 +19,5 @@ public class LocalDateSerializer extends StdSerializer<LocalDate> {
     public void serialize(final LocalDate value, final JsonGenerator generator, final SerializerProvider provider) throws IOException {
         generator.writeString(value.format(JavaTimeUtils.LOCAL_DATE_FORMATTER));
     }
+
 }
