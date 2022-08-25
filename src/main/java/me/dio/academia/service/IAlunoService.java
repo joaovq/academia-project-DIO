@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 public interface IAlunoService {
     /**
      * Cria um Aluno e salva no banco de dados.

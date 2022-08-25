@@ -8,10 +8,12 @@ import me.dio.academia.infra.utils.JavaTimeUtils;
 import me.dio.academia.repository.AlunoRepository;
 import me.dio.academia.service.IAlunoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
 
+@Service
 public class AlunoServiceImpl implements IAlunoService {
 
 

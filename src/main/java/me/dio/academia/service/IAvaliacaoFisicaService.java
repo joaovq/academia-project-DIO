@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 public interface IAvaliacaoFisicaService {
     /**
      * Cria uma Avaliação Física e salva no banco de dados.
