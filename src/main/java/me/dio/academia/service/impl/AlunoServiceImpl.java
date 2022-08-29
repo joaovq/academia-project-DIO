@@ -37,6 +37,9 @@ public class AlunoServiceImpl implements IAlunoService {
     }
 
     @Override
+//    O Get no Postman: http://localhost:8081/dataDeNacimento={dataDeNacimento}
+//    Vai retornar todos os alunos com a data de nascimento requisitada
+//    Obs:  dataDeNacimento é o KEY do postman
     public List<Aluno> getAll(String dataDeNascimento) {
 
         if(dataDeNascimento == null) {

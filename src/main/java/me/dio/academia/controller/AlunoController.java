@@ -18,6 +18,7 @@ public class AlunoController {
     private AlunoServiceImpl service;
 
     @PostMapping
+    //@Valid vai fazer com que as validações feitas na classe Aluno, estejam em vigor. TOp!!
     public Aluno create(@Valid @RequestBody AlunoForm form) {
         return service.create(form);
     }
