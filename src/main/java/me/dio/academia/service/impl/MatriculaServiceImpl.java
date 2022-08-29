@@ -48,7 +48,14 @@ public class MatriculaServiceImpl implements IMatriculaService {
 
     @Override
     public void delete(Long id) {
+        boolean alunoIsPresent = matriculaRepository.findById(id).isPresent();
 
+        if(alunoIsPresent){
+            Matricula aluno = matriculaRepository.findById(id).get();
+            matriculaRepository.delete(aluno);
+        }
+        else
+            System.out.println("DELETE Falhou!!! Verifique se o id está certo ou se o aluno existe");
     }
 
 

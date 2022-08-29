@@ -59,12 +59,20 @@ public class AlunoServiceImpl implements IAlunoService {
 
     @Override
     public void delete(Long id) {
+        boolean alunoIsPresent = repository.findById(id).isPresent();
+
+        if(alunoIsPresent){
+            Aluno aluno = repository.findById(id).get();
+            repository.delete(aluno);
+        }
+        else
+            System.out.println("DELETE Falhou!!! Verifique se o id está certo ou se o aluno existe");
     }
 
     @Override
     public List<AvaliacaoFisica> getAllAvaliacaoFisicaId(Long id) {
 
-        Aluno aluno = repository.findById(id).get();
+        Aluno aluno = repository.findById(id).orElseThrow();
 
         return aluno.getAvaliacoes();
 
